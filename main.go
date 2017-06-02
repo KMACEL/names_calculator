@@ -8,24 +8,31 @@ import (
 	"time"
 )
 
+var getNameTxt string
+var a int
+var total int
+var getName string
+
 func main() {
 	start := time.Now()
 	b, _ := ioutil.ReadFile("names.txt")
-	var s []string = strings.Split(string(b), "\",\"")
+
+	getNameTxt = strings.Replace((strings.TrimSpace(string(b))), "\"", "", -1)
+
+	var s []string = strings.Split(string(getNameTxt), ",")
 	sort.Strings(s)
-	var a int
-	var total int
+
 	for i := 0; i < len(s); i++ {
-		getName := s[i]
+		getName = s[i]
+		a = 0
 		for j := 0; j < len(getName); j++ {
 			a = a + int(getName[j]-'@')
 		}
-		total = total + (a * (i))
-		a = 0
+		total = total + (a * (i + 1))
+
 	}
 	fmt.Println(total)
 
 	elapsed := time.Since(start)
-
-	fmt.Println("\nTotal Time : ", elapsed)
+	fmt.Printf("Total Time : %s \n", elapsed)
 }
