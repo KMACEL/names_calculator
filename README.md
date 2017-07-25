@@ -17,7 +17,11 @@ Name Score: 938 * 53 = 49714;
 
 The list is calculated for all the names in this way and the sum of the results is requested. Answer: 871198282
 
+
 In the tests made;
+
 GOlang time: 2 ms,
+
 Python time: 7 ms,
+
 Java time: 9 ms,
