@@ -12,6 +12,7 @@ I = 9,
 N = 14,
 
 Sum of letters: 3 + 15 + 12 + 9 + 14 = 53
+
 Name Score: 938 * 53 = 49714;
 
 The list is calculated for all the names in this way and the sum of the results is requested. Answer: 871198282
